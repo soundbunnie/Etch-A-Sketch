@@ -11,8 +11,6 @@
 #grid{
     display: flex;
     align-content: flex-start;
-    margin: 0px;
-    padding: 0px;
     flex-wrap: wrap;
 }
 .gridbox{
