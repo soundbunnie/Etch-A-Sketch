@@ -6,7 +6,7 @@ function drawGrid(size=16){
         document.getElementById('grid').appendChild(newRow); //append each row to grid
     }
     for (let row of rows){
-        for (let i =0; i < size; i++){
+        for (let i =0; i < size; i++){ //create x amount of boxes for each row
             let gridBox = document.createElement('div');
             gridBox.setAttribute('class', 'gridBox');
             row.appendChild(gridBox);
