@@ -13,3 +13,5 @@ function drawGrid(size=16){
         }      
     }
 }
+
+drawGrid()
