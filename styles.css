@@ -14,6 +14,7 @@
     align-content: flex-start;
     flex-wrap: wrap;
 }
+
 .gridbox{
     border: 1px solid #333;
     flex: 1 1 auto;
