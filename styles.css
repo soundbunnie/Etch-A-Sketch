@@ -8,3 +8,9 @@
     margin-top: 60px;
     background-color: #dfdfdf;
 }
+
+.gridbox{
+    background-color: #333;
+    width: 10px;
+    height: 10px;
+}
