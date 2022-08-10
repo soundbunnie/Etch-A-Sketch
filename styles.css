@@ -15,6 +15,7 @@
 }
 .gridbox{
     border: 1px solid #333;
+    flex: 1 1 auto;
     min-width: 20px;
     min-height: 20px;
 }
