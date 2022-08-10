@@ -14,7 +14,7 @@
     flex-wrap: wrap;
 }
 .gridbox{
-    background-color: #333;
-    width: 1vw;
-    height: 1vh;
+    border: 1px solid #333;
+    min-width: 20px;
+    min-height: 20px;
 }
