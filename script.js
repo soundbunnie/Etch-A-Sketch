@@ -5,7 +5,7 @@ var dimensionBoxTitle = document.getElementById('dimensions-title');
 
 function drawGrid(size=16){
     let rows = document.getElementsByClassName('row');
-    deleteGrid();
+    eraseGrid();
     for (let i = 0; i <= size; i++){ // create x amount of rows
         let newRow = document.createElement('div');
         newRow.setAttribute('class', 'row');
@@ -23,13 +23,10 @@ function drawGrid(size=16){
     addListeners();
     }
 }
-function deleteGrid(){
-    let rows = document.querySelectorAll('.row');
-    rows.forEach(row =>{
-        row.remove();
-    })
-    gridBox.forEach(box=>{
-        box.remove();
+function eraseGrid(){
+    let gridBox = document.querySelectorAll('.gridBox')
+    gridBox.forEach(box =>{
+        box.setAttribute('style', 'background-color: #dfdfdf;');
     })
 }
 
