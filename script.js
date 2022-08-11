@@ -3,7 +3,7 @@ var gridBoard = document.querySelector('#grid');
 var rowIndex = 0;
 var dimensionBoxTitle = document.getElementById('dimensions-title');
 
-function drawGrid(size=16){
+function drawGrid(size=64){
     let rows = document.getElementsByClassName('row');
     eraseGrid();
     for (let i = 0; i <= size; i++){ // create x amount of rows
