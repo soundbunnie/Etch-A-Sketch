@@ -22,8 +22,8 @@
 
 .grid-container{
     display: flex;
-    border: 3px solid #333;
-    /* border-radius: 1em; */
+    border: 8px solid #333;
+    border-radius: 0.5em;
     width: 50em;
     height: 65vh;
     margin: auto;
