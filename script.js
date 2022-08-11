@@ -35,10 +35,6 @@ function deleteGrid(){
 function addListeners(){
     let gridBox = document.querySelectorAll('.gridBox')
     gridBox.forEach(box =>{
-        box.addEventListener('pointerdown', function changeColor(event){
-            console.log(`box clicked, ${box.id}`);
-            box.setAttribute('style', 'background-color: yellow;');
-        })
         box.addEventListener('mouseover', function changeHoverColor(event){
             box.setAttribute('style', 'background-color: grey;');
         })
