@@ -1,5 +1,11 @@
+@font-face {
+    font-family: DancingScript;
+    src: url('dancing-script.regular.ttf');
+}
+
 .container{
     background-color: red;
+    font-family: 'DancingScript';
     margin-left: 200px;
     margin-right: 200px;
     border: 5px solid black;
@@ -12,7 +18,6 @@
     font-size:57px;
     font-weight: 300;
     color: gold;
-    font-family: cursive;
 }
 
 .grid-container{
