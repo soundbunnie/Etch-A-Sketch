@@ -1,5 +1,6 @@
 function drawGrid(size=16){
     let rows = document.getElementsByClassName('row');
+    deleteGrid()
     for (let i = 0; i < size; i++){ // create x amount of rows
         let newRow = document.createElement('div');
         newRow.setAttribute('class', 'row');
@@ -12,6 +13,18 @@ function drawGrid(size=16){
             row.appendChild(gridBox);
         }      
     }
+    gridDrawn = true;
+}
+
+function deleteGrid(){
+    let rows = document.querySelectorAll('.row');
+    let gridBox = document.querySelectorAll('.gridBox');
+    rows.forEach(row =>{
+        row.remove();
+    })
+    gridBox.forEach(box=>{
+        box.remove();
+    })
 }
 
 drawGrid()
