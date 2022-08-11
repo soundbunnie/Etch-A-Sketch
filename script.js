@@ -1,6 +1,8 @@
 var gridBox = document.querySelectorAll('.gridBox')
 var gridBoard = document.querySelector('#grid');
 var rowIndex = 0;
+var size = document.getElementById('dimension-size').value;
+var dimensionBoxTitle = document.getElementById('dimensions-title');
 
 function drawGrid(size=16){
     let rows = document.getElementsByClassName('row');
@@ -43,8 +45,8 @@ function addListeners(){
 }
 
 function changeDimensions(){
-    var size = document.getElementById('dimension-size').value;
-    console.log(size);
+    size = document.getElementById('dimension-size').value;
+    dimensionBoxTitle.textContent = `Change grid size (Currently ${size} x ${size})`
     drawGrid(size)
 }
 
