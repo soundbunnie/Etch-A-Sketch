@@ -46,4 +46,10 @@ function addListeners(){
     
 }
 
+function changeDimensions(){
+    var size = document.getElementById('dimension-size').value;
+    console.log(size);
+    drawGrid(size)
+}
+
 drawGrid();
