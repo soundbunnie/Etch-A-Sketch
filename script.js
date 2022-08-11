@@ -6,14 +6,14 @@ var dimensionBoxTitle = document.getElementById('dimensions-title');
 function drawGrid(size=16){
     let rows = document.getElementsByClassName('row');
     deleteGrid();
-    for (let i = 0; i < size; i++){ // create x amount of rows
+    for (let i = 0; i <= size; i++){ // create x amount of rows
         let newRow = document.createElement('div');
         newRow.setAttribute('class', 'row');
         newRow.setAttribute('id', `row-${i}`); //set id to row number
         document.getElementById('grid').appendChild(newRow); //append each row to grid
     }
     for (let row of rows){
-        for (let i =0; i < size; i++){ //create x amount of boxes for each row
+        for (let i =0; i <= size; i++){ //create x amount of boxes for each row
             let gridBox = document.createElement('div');
             gridBox.setAttribute('class', 'gridBox');
             gridBox.setAttribute('id', `${rowIndex}-${i}`); //set id to rownumber - boxnumber
