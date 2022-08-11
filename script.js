@@ -1,4 +1,4 @@
-const gridBox = document.querySelectorAll('.gridbox')
+var gridBox = document.querySelectorAll('.gridBox')
 var rowIndex = 0;
 
 function drawGrid(size=16){
@@ -29,5 +29,12 @@ function deleteGrid(){
         box.remove();
     })
 }
-
 drawGrid();
+
+var gridBox = document.querySelectorAll('.gridBox')
+gridBox.forEach(box =>{
+    box.addEventListener('click', function changeColor(event){
+        console.log(`box clicked, ${box.id}`);
+        box.setAttribute('style', 'background-color: yellow;');
+    })
+})
