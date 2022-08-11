@@ -19,6 +19,7 @@ function drawGrid(size=16){
             row.appendChild(gridBox);
         }
         rowIndex+=1;
+    addListeners();
     }
 }
 function deleteGrid(){
@@ -31,15 +32,18 @@ function deleteGrid(){
     })
 }
 
-drawGrid();
+function addListeners(){
+    let gridBox = document.querySelectorAll('.gridBox')
+    gridBox.forEach(box =>{
+        box.addEventListener('pointerdown', function changeColor(event){
+            console.log(`box clicked, ${box.id}`);
+            box.setAttribute('style', 'background-color: yellow;');
+        })
+        box.addEventListener('mouseover', function changeHoverColor(event){
+            box.setAttribute('style', 'background-color: grey;');
+        })
+    })
+    
+}
 
-var gridBox = document.querySelectorAll('.gridBox')
-gridBox.forEach(box =>{
-    box.addEventListener('pointerdown', function changeColor(event){
-        console.log(`box clicked, ${box.id}`);
-        box.setAttribute('style', 'background-color: yellow;');
-    })
-    box.addEventListener('mouseover', function changeHoverColor(event){
-        box.setAttribute('style', 'background-color: grey;');
-    })
-})
+drawGrid();
