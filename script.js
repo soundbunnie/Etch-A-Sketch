@@ -1,4 +1,5 @@
 var gridBox = document.querySelectorAll('.gridBox')
+var gridBoard = document.querySelector('#grid');
 var rowIndex = 0;
 
 function drawGrid(size=16){
@@ -29,6 +30,7 @@ function deleteGrid(){
         box.remove();
     })
 }
+
 drawGrid();
 
 var gridBox = document.querySelectorAll('.gridBox')
