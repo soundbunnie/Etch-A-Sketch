@@ -11,9 +11,15 @@
 <body>
     <div class="container">
         <div class="control-panel">
-            <div class = "horizontal=controls">Turn horizontal knob: D (left), F (right)</div>
-            <div class = "vertical-controls">Turn vertical knob: J (left), K (right)</div>
-            <div class = "erase-control">Erase: E + O</div>
+            <div id = "Controls"> 
+                <h1>Controls</h1>
+                <div class = "control-information"><em>Note: You can also draw with your mouse!</em></div>
+                    <div class = control-information-two><em>Though keep in mind you will no longer be using an Etch-a-Sketch</em></div>
+                    <br>
+                <div class = "horizontal=controls">Turn horizontal knob: D (left), F (right)</div>
+                <div class = "vertical-controls">Turn vertical knob: J (left), K (right)</div>
+                <div class = "erase-control">Erase: E + O</div>
+            </div>
             <div class="change-dimensions-container">
                 <div id="dimensions-title">Change grid size (Currently 64x64)</div>
                 <input type = "number" id = "dimension-size" placeholder="ex. '16' for 16x16 (max 64)">
