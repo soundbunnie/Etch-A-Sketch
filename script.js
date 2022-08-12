@@ -97,18 +97,20 @@ document.addEventListener('keydown', function(event){
         keysPressed.o = true;
     }
     if (keysPressed.e === true && keysPressed.o === true){
+        screenContainer.setAttribute('class', 'shake-anim');
         eraseGrid();
     }
     screenContainer.setAttribute('style', 'background-color: red');
     logo.innerText = "Etch-a-Sketch";
-
 });
 
 document.addEventListener('keyup', function(event){
         if (event.key === "e"){
+            screenContainer.removeAttribute('class', 'shake-anim');
             keysPressed.e = false;
         }
         if (event.key === "o"){
+            screenContainer.removeAttribute('class', 'shake-anim');
             keysPressed.o = false;
         }
 })
