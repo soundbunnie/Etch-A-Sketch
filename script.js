@@ -3,7 +3,7 @@ var gridBoard = document.querySelector('#grid');
 var rowIndex = 0;
 var dimensionBoxTitle = document.getElementById('dimensions-title');
 
-function drawGrid(size=64){
+function drawGrid(size=64   ){
     let rows = document.getElementsByClassName('row');
     eraseGrid();
     for (let i = 0; i <= size; i++){ // create x amount of rows
@@ -39,6 +39,20 @@ function addListeners(){
     })
     
 }
+
+document.addEventListener('keydown', function(event){
+    let stylusY = 0 //define default variables for x,y of stylus
+    let stylusX = 1;
+    if (event.key === "d"){
+        stylusX--;
+        let stylusPosition = `${stylusY}-${stylusX}`;
+        let nextPos = document.getElementById(stylusPosition);
+        nextPos.setAttribute('style', 'background-color: grey');
+        stylusPosition = nextPos;//redefine stylusPoistion
+        console.log(stylusPosition);
+    }
+})
+
 
 function changeDimensions(){
     size = document.getElementById('dimension-size').value;
