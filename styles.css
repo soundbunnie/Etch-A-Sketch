@@ -4,6 +4,15 @@
 }
 
 .container{
+    display: flex;
+}
+
+.control-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.screen-container{
     background-color: red;
     margin: 0 auto;
     width: 65em;

@@ -10,21 +10,27 @@
 </head>
 <body>
     <div class="container">
-        <div class = "logo">Etch-A-Sketch</div>
-        <div class="grid-container">
-            <div id="grid">
-            </div>
-        </div>
-        <div class="buttons-container">
-            <div class = "knob-x"></div>
-            <button type="button" class="erase" onclick="eraseGrid()">Erase</button>
+        <div class="control-panel">
+            <div class = "horizontal=controls">Turn horizontal knob: D (left), F (right)</div>
+            <div class = "vertical-controls">Turn vertical knob: J (left), K (right)</div>
+            <div class = "erase-control">Erase: E + O</div>
             <div class="change-dimensions-container">
                 <div id="dimensions-title">Change grid size (Currently 64x64)</div>
                 <input type = "number" id = "dimension-size" placeholder="ex. '16' for 16x16 (max 64)">
                 <button type="button" onclick="changeDimensions()">Change grid size</button>
             </div>
-            <div class = "knob-y"></div>
-    </div>
+        </div>
+        <div class="screen-container">
+            <div class = "logo">Etch-A-Sketch</div>
+            <div class="grid-container">
+                <div id="grid">
+                </div>
+            </div>
+            <div class="buttons-container">
+                <div class = "knob-x"></div>
+                <button type="button" class="erase" onclick="eraseGrid()">Erase</button>
+                <div class = "knob-y"></div>
+        </div>
     </div>
 </body>
 </html>
