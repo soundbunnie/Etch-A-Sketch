@@ -53,28 +53,28 @@ document.addEventListener('keydown', function(event){
         stylusY = 0;
         stylusX = 1;
     }
-    if (event.key === "d"){
+    if (event.key === "d" && stylusX - 1 >= 0){//do nothing if modifying stylusposition would put it off screen
         stylusX--;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new x value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
-    if (event.key === "f"){
+    if (event.key === "f" && stylusX + 1 >= 0){
         stylusX++;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new x value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);       
     }
-    if (event.key === "j"){
+    if (event.key === "j" && stylusY - 1 >= 0){
         stylusY--;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
-    if (event.key === "k"){
+    if (event.key === "k" && stylusY + 1 >= 0){
         stylusY++;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
