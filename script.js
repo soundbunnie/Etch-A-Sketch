@@ -4,6 +4,7 @@ var rowIndex = 0;
 var dimensionBoxTitle = document.getElementById('dimensions-title');
 var stylusY;
 var stylusX;
+var controlType;
 var keysPressed = {
     e: false,
     o: false,
