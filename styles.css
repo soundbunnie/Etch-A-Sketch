@@ -3,8 +3,13 @@
     src: url('dancing-script.regular.ttf');
 }
 
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);}
+
 .container{
     display: flex;
+    margin-top: 2em;
 }
 
 .control-panel{
