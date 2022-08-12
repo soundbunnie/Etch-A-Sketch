@@ -6,13 +6,19 @@ var logo = document.getElementById('logo');
 var rowIndex = 0;
 var stylusY;
 var stylusX;
+var gridSize;
 var controlType;
 var keysPressed = {
+    d: false,
+    f: false,
+    j: false,
+    k: false,
     e: false,
     o: false,
 };
 
 function drawGrid(size=64){
+    gridSize = size;
     let rows = document.getElementsByClassName('row');
     eraseGrid(); //make sure grid is blank before re-drawing
     for (let i = 0; i <= size; i++){ // create (size) amount of rows
@@ -63,13 +69,15 @@ document.addEventListener('keydown', function(event){
         stylusX = 1;
     }
     if (event.key === "d" && stylusX - 1 >= 0){//do nothing if modifying stylusposition would put it off screen
+        keysPressed.d = true;
         stylusX--;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new x value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
-    if (event.key === "f" && stylusX + 1 >= 0){
+    if (event.key === "f" && stylusX + 1 <= gridSize){
+        keysPressed.f = true;
         stylusX++;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new x value
         let nextPos = document.getElementById(stylusPosition);
@@ -77,13 +85,15 @@ document.addEventListener('keydown', function(event){
         console.log(stylusPosition);       
     }
     if (event.key === "j" && stylusY - 1 >= 0){
+        keysPressed.j = true;
         stylusY--;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
-    if (event.key === "k" && stylusY + 1 >= 0){
+    if (event.key === "k" && stylusY + 1 <= gridSize){
+        keysPressed.k = true;
         stylusY++;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
