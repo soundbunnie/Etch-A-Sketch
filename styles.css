@@ -38,10 +38,19 @@ body{
 
 button{
     padding: 8px;
+    cursor: pointer;
     border: 2px solid black;
     border-radius: 1em;
     background-color: #DAF7A6;
     font-size: 1em;
+}
+
+button:hover {background-color: #3e8e41}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .horizontal-controls,
