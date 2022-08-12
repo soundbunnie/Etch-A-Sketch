@@ -61,6 +61,20 @@ document.addEventListener('keydown', function(event){
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);       
     }
+    if (event.key === "j"){
+        stylusY--;
+        let stylusPosition = `${stylusY}-${stylusX}`;
+        let nextPos = document.getElementById(stylusPosition);
+        nextPos.setAttribute('style', 'background-color: grey');
+        console.log(stylusPosition);
+    }
+    if (event.key === "k"){
+        stylusY++;
+        let stylusPosition = `${stylusY}-${stylusX}`;
+        let nextPos = document.getElementById(stylusPosition);
+        nextPos.setAttribute('style', 'background-color: grey');
+        console.log(stylusPosition);
+    }
 })
 
 
