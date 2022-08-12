@@ -4,6 +4,10 @@ var rowIndex = 0;
 var dimensionBoxTitle = document.getElementById('dimensions-title');
 var stylusY;
 var stylusX;
+var keysPressed = {
+    e: false,
+    o: false,
+};
 
 function drawGrid(size=64){
     let rows = document.getElementsByClassName('row');
@@ -81,6 +85,25 @@ document.addEventListener('keydown', function(event){
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
+    if (event.key === "e"){
+        keysPressed.e = true;
+    }
+    if (event.key === "o"){
+        keysPressed.o = true;
+    }
+    if (keysPressed.e === true && keysPressed.o === true){
+        eraseGrid();
+    }
+
+});
+
+document.addEventListener('keyup', function(event){
+        if (event.key === "e"){
+            keysPressed.e = false;
+        }
+        if (event.key === "o"){
+            keysPressed.o = false;
+        }
 })
 
 drawGrid();
