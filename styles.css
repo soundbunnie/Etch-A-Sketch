@@ -29,9 +29,25 @@ body{
     text-align: center;
 }
 
+#dimension-size{
+    width: 20em;
+    height: 2em;
+    border: 1px solid black;
+    border-radius: 0.5em;
+}
+
+button{
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 1em;
+    background-color: #DAF7A6;
+    font-size: 1em;
+}
+
 .horizontal-controls,
 .vertical-controls,
-.erase-control{
+.erase-control,
+#dimensions-title{
     font-size: 20px;
 }
 
