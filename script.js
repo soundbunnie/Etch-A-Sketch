@@ -22,7 +22,7 @@ function drawGrid(size=64){
             row.appendChild(gridBox);//append gridbox to respective row
         }
         rowIndex+=1;
-    addListeners();
+    addListeners();//add event listeners to gridbox after they've been created
     }
 }
 function eraseGrid(){
