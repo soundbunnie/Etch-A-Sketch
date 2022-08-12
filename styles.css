@@ -134,12 +134,12 @@ button:active {
 
 .knob-x{
     margin-left: 8px;
-    box-shadow: inset 2px 1px 3px 1px grey;
+    box-shadow: inset 0.5px 1px 3px 1px grey;
 }
 
 .knob-y{
     margin-right: 8px;
-    box-shadow: inset -2px 1px 3px 1px grey;
+    box-shadow: inset 0.5px 1px 3px 1px grey;
 }
 
 .knob-x, .knob-y{
