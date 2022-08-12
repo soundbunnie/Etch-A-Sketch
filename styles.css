@@ -24,6 +24,10 @@ body{
     margin-left: 1em;
 }
 
+#controls{
+    text-align: center;
+}
+
 .horizontal-controls,
 .vertical-controls,
 .erase-control{
