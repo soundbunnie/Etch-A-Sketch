@@ -107,6 +107,14 @@ body{
     align-items: center;
 }
 
+.knob-x{
+    margin-left: 8px;
+}
+
+.knob-y{
+    margin-right: 8px;
+}
+
 .knob-x, .knob-y{
     background: white;
     border: 5px solid grey;
