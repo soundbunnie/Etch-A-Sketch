@@ -2,6 +2,8 @@ var gridBox = document.querySelectorAll('.gridBox')
 var gridBoard = document.querySelector('#grid');
 var rowIndex = 0;
 var dimensionBoxTitle = document.getElementById('dimensions-title');
+var stylusY;
+var stylusX;
 
 function drawGrid(size=64   ){
     let rows = document.getElementsByClassName('row');
@@ -41,15 +43,23 @@ function addListeners(){
 }
 
 document.addEventListener('keydown', function(event){
-    let stylusY = 0 //define default variables for x,y of stylus
-    let stylusX = 1;
+    if (stylusX === undefined && stylusY === undefined){ //define default x,y for stylus
+        stylusY = 0;
+        stylusX = 1;
+    }
     if (event.key === "d"){
         stylusX--;
         let stylusPosition = `${stylusY}-${stylusX}`;
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
-        stylusPosition = nextPos;//redefine stylusPoistion
         console.log(stylusPosition);
+    }
+    if (event.key === "f"){
+        stylusX++;
+        let stylusPosition = `${stylusY}-${stylusX}`;
+        let nextPos = document.getElementById(stylusPosition);
+        nextPos.setAttribute('style', 'background-color: grey');
+        console.log(stylusPosition);       
     }
 })
 
