@@ -77,7 +77,7 @@ button:active {
     color: #ffcc00;
 }
 
-.grid-container{
+#grid-container{
     display: flex;
     border: 8px solid #333;
     border-radius: 0.5em;
