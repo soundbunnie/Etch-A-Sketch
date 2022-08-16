@@ -119,6 +119,10 @@ button:active {
     border: 3px solid black;
 }
 
+#color-checkbox{
+    margin-top: 30px;
+}
+
 .change-dimensions-container{
     display: flex;
     flex-direction: column;
