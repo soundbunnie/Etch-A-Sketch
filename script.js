@@ -50,8 +50,6 @@ function addListeners(){
     gridBox.forEach(box =>{
         box.addEventListener('mouseover', function changeHoverColor(event){ //create function that changes color of gridbox when moused over
             box.setAttribute('style', 'background-color: grey;');
-            screenContainer.setAttribute('style', 'background-color: #4FD5D6');
-            logo.innerText = "Sketch-a-Sketch";
         })
     })
     
@@ -109,8 +107,6 @@ document.addEventListener('keydown', function(event){
     if (keysPressed.e === true && keysPressed.o === true){
         screenContainer.setAttribute('class', 'shake-anim');
     }
-    screenContainer.setAttribute('style', 'background-color: red');
-    logo.innerText = "Etch-a-Sketch";
 });
 
 document.addEventListener('keyup', function(event){
