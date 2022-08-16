@@ -84,17 +84,17 @@ document.addEventListener('keydown', function(event){
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);       
     }
-    if (event.key === "j" && stylusY - 1 >= 0){
+    if (event.key === "j" && stylusY + 1 <= gridSize){
         keysPressed.j = true;
-        stylusY--;
+        stylusY++;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
         console.log(stylusPosition);
     }
-    if (event.key === "k" && stylusY + 1 <= gridSize){
+    if (event.key === "k" && stylusY - 1 >= 0){
         keysPressed.k = true;
-        stylusY++;
+        stylusY--;
         let stylusPosition = `${stylusY}-${stylusX}`;//update stylus position with new y value
         let nextPos = document.getElementById(stylusPosition);
         nextPos.setAttribute('style', 'background-color: grey');
