@@ -58,12 +58,12 @@ function addListeners(){
     gridBox.forEach(box =>{
         box.addEventListener('mouseover', function changeHoverColor(event){ //create function that changes color of gridbox when moused over
             let color;
-            if (checkbox){
-                color = colors[Math.floor(Math.random() * colors.length)];
+            if (checkbox.checked){
+                color = colors[Math.floor(Math.random() * colors.length)];//if rainbow colors checkbox is checked choose random color
                 console.log(color);
             } 
-            else if (checkbox === false){
-                color = grey;
+            else if (checkbox.checked === false){
+                color = "grey";
             }
             box.setAttribute('style', `background-color: ${color};`);
             gridContainer.setAttribute('style', 'background-color: black;');
