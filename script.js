@@ -2,6 +2,7 @@ var gridBox = document.querySelectorAll('.gridBox')
 var gridBoard = document.querySelector('#grid');
 var dimensionBoxTitle = document.getElementById('dimensions-title');
 var screenContainer = document.getElementById('screen-container');
+var gridContainer = document.getElementById('grid-container');
 var logo = document.getElementById('logo');
 var rowIndex = 0;
 var stylusY;
@@ -50,6 +51,7 @@ function addListeners(){
     gridBox.forEach(box =>{
         box.addEventListener('mouseover', function changeHoverColor(event){ //create function that changes color of gridbox when moused over
             box.setAttribute('style', 'background-color: grey;');
+            gridContainer.setAttribute('style', 'background-color: black');
         })
     })
     
@@ -107,6 +109,7 @@ document.addEventListener('keydown', function(event){
     if (keysPressed.e === true && keysPressed.o === true){
         screenContainer.setAttribute('class', 'shake-anim');
     }
+    gridContainer.setAttribute('style', 'background-color: #dfdfdf');
 });
 
 document.addEventListener('keyup', function(event){
