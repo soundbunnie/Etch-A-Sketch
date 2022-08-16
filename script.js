@@ -4,6 +4,7 @@ var dimensionBoxTitle = document.getElementById('dimensions-title');
 var screenContainer = document.getElementById('screen-container');
 var gridContainer = document.getElementById('grid-container');
 var logo = document.getElementById('logo');
+var checkbox = document.querySelector('#color-checkbox');
 var rowIndex = 0;
 var stylusY;
 var stylusX;
@@ -17,6 +18,12 @@ var keysPressed = {
     e: false,
     o: false,
 };
+var colors = [
+    "#53BF9D",
+    "#F94C66",
+    "#BD4291",
+    "#FFC54D"
+]
 
 function drawGrid(size=64){
     gridSize = size;
@@ -50,8 +57,16 @@ function addListeners(){
     let gridBox = document.querySelectorAll('.gridBox')
     gridBox.forEach(box =>{
         box.addEventListener('mouseover', function changeHoverColor(event){ //create function that changes color of gridbox when moused over
-            box.setAttribute('style', 'background-color: grey;');
-            gridContainer.setAttribute('style', 'background-color: black');
+            let color;
+            if (checkbox){
+                color = colors[Math.floor(Math.random() * colors.length)];
+                console.log(color);
+            } 
+            else if (checkbox === false){
+                color = grey;
+            }
+            box.setAttribute('style', `background-color: ${color};`);
+            gridContainer.setAttribute('style', 'background-color: black;');
         })
     })
     
