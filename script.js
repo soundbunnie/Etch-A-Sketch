@@ -53,6 +53,17 @@ function eraseGrid(){
     })
 }
 
+function destroyGrid(){
+    let rows = document.querySelectorAll('.row');
+    rows.forEach(row => {
+        row.remove();
+    })
+    let gridBox = document.querySelectorAll('.gridBox')
+    gridBox.forEach(box => {
+        box.remove();
+    })
+}
+
 function addListeners(){
     let gridBox = document.querySelectorAll('.gridBox')
     gridBox.forEach(box =>{
@@ -75,6 +86,7 @@ function addListeners(){
 function changeDimensions(){
     size = document.getElementById('dimension-size').value;//get value typed in the text box
     dimensionBoxTitle.textContent = `Change grid size (Currently ${size} x ${size})`
+    destroyGrid();
     drawGrid(size);//redraw grid using new size
 }
 
