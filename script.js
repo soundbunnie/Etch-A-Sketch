@@ -6,7 +6,6 @@ var gridContainer = document.getElementById('grid-container');
 var logo = document.getElementById('logo');
 var checkbox = document.querySelector('#color-checkbox');
 var rowIndex = 0;
-var color = "grey";
 var stylusY;
 var stylusX;
 var gridSize;
@@ -27,6 +26,7 @@ var colors = [
 ]
 
 function drawGrid(size=64){
+    gridSize = size;
     let rows = document.getElementsByClassName('row');
     eraseGrid(); //make sure grid is blank before re-drawing
     for (let i = 0; i <= size; i++){ // create (size) amount of rows
@@ -49,7 +49,7 @@ function drawGrid(size=64){
 function eraseGrid(){
     let gridBox = document.querySelectorAll('.gridBox')
     gridBox.forEach(box =>{
-        box.setAttribute('style', `background-color: ${color};`); //reset all gridbox color to default
+        box.setAttribute('style', 'background-color: #dfdfdf;'); //reset all gridbox color to default
     })
 }
 
@@ -57,6 +57,7 @@ function addListeners(){
     let gridBox = document.querySelectorAll('.gridBox')
     gridBox.forEach(box =>{
         box.addEventListener('mouseover', function changeHoverColor(event){ //create function that changes color of gridbox when moused over
+            let color;
             if (checkbox.checked){
                 color = colors[Math.floor(Math.random() * colors.length)];//if rainbow colors checkbox is checked choose random color
                 console.log(color);
@@ -77,7 +78,7 @@ function changeDimensions(){
     drawGrid(size);//redraw grid using new size
 }
 
-document.addEventListener('keydown', function(event){   
+document.addEventListener('keydown', function(event){
     if (stylusX === undefined && stylusY === undefined){ //define default x,y for stylus
         stylusY = 0;
         stylusX = 1;
