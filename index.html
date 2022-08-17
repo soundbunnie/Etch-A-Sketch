@@ -18,11 +18,11 @@
                 <div class = "horizontal-controls"><b>Use horizontal knob: D (left), F (right)</b></div>
                 <div class = "vertical-controls"><b>Use vertical knob: J (down), K (up)</b></div>
                 <div class = "erase-control"><b>Erase: E + O</b></div>
-                <input type="checkbox" id="color-checkbox"> Rainbow colors
+                <input type="checkbox" id="color-checkbox"> Freestyle colors (Mouse only)
             </div>
             <div class="change-dimensions-container">
                 <div id="dimensions-title"><b>Change grid size (Currently 64x64)</b></div>
-                <input type = "number" id = "dimension-size" placeholder="ex. '16' for 16x16">
+                <input type = "number" id = "dimension-size" min = 1 max = 100 placeholder="ex. '16' for 16x16">
                 <button type="button" onclick="changeDimensions()">Change grid size</button>
             </div>
         </div>
