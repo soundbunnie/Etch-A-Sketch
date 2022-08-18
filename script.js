@@ -27,6 +27,7 @@ var colors = [
 
 function drawGrid(size=64){
     let rows = document.getElementsByClassName('row');
+    gridSize = size;
     eraseGrid(); //make sure grid is blank before re-drawing
     for (let i = 0; i <= size; i++){ // create (size) amount of rows
         let newRow = document.createElement('div');
@@ -83,6 +84,7 @@ function addListeners(){
 }
 
 function changeDimensions(){
+    gridSize = size;
     size = document.getElementById('dimension-size').value;//get value typed in the text box
     if (size > 128){
         alert("Input number exceeded max of 128. Grid size has been set to 64x64.")
