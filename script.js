@@ -26,7 +26,6 @@ var colors = [
 ]
 
 function drawGrid(size=64){
-    gridSize = size;
     let rows = document.getElementsByClassName('row');
     eraseGrid(); //make sure grid is blank before re-drawing
     for (let i = 0; i <= size; i++){ // create (size) amount of rows
@@ -85,6 +84,9 @@ function addListeners(){
 
 function changeDimensions(){
     size = document.getElementById('dimension-size').value;//get value typed in the text box
+    if (size > 64){
+        size = 64;
+    }
     dimensionBoxTitle.textContent = `Change grid size (Currently ${size} x ${size})`
     destroyGrid();
     drawGrid(size);//redraw grid using new size
