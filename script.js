@@ -84,7 +84,8 @@ function addListeners(){
 
 function changeDimensions(){
     size = document.getElementById('dimension-size').value;//get value typed in the text box
-    if (size > 64){
+    if (size > 128){
+        alert("Input number exceeded max of 128. Grid size has been set to 64x64.")
         size = 64;
     }
     dimensionBoxTitle.textContent = `Change grid size (Currently ${size} x ${size})`
