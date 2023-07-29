@@ -28,6 +28,7 @@ var colors = [
 function drawGrid(size=64){
     let rows = document.getElementsByClassName('row');
     gridSize = size;
+    rowIndex = 0;
     eraseGrid(); //make sure grid is blank before re-drawing
     for (let i = 0; i <= size; i++){ // create (size) amount of rows
         let newRow = document.createElement('div');
@@ -145,16 +146,29 @@ document.addEventListener('keydown', function(event){
 });
 
 document.addEventListener('keyup', function(event){
-        if (event.key === "e"){
-            screenContainer.removeAttribute('class', 'shake-anim');
-            eraseGrid();
-            keysPressed.e = false;
-        }
-        if (event.key === "o"){
-            screenContainer.removeAttribute('class', 'shake-anim');
-            eraseGrid();
-            keysPressed.o = false;
-        }
+    if (event.key === "d"){
+        keysPressed.d = false;
+    }
+    if (event.key === "f"){
+        keysPressed.f = false;
+    }
+    if (event.key === "j"){
+        keysPressed.j = false;
+    } 
+    if (event.key === "k")
+    {
+        keysPressed.k = false;
+    }
+    if (event.key === "e"){
+        screenContainer.removeAttribute('class', 'shake-anim');
+        eraseGrid();
+        keysPressed.e = false;
+    }
+    if (event.key === "o"){
+        screenContainer.removeAttribute('class', 'shake-anim');
+        eraseGrid();
+        keysPressed.o = false;
+    }
 })
 
 drawGrid();
